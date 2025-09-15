@@ -1,0 +1,7 @@
+sync_reset_test
+up_counting_test
+down_counting_test
+enable_pin_test
+load_value_test
+carry_out_test
+random_test

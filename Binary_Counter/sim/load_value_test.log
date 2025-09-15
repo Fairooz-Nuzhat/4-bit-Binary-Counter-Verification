@@ -1,0 +1,80 @@
+irun(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s086: Started on Sep 25, 2024 at 10:02:56 +06
+irun
+	-timescale 1ns/1ps
+	-f filelist.f
+		/home/Nu240807/work/counter_verification/sim/../rtl/Binary_Counter.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/tb_top/counter_interface.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/agent/counter_transaction.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/agent/counter_driver.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/agent/counter_monitor.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/agent/counter_coverage.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/agent/counter_generator.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/agent/counter_agent.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/environment/counter_scoreboard.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/environment/counter_environment.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/test_lib/counter_base_test.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/test_lib/sync_reset_test.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/test_lib/up_counting_test.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/test_lib/down_counting_test.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/test_lib/enable_pin_test.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/test_lib/load_value_test.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/test_lib/carry_out_test.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/test_lib/random_test.sv
+		/home/Nu240807/work/counter_verification/sim/../tb/tb_top/counter_tb_top.sv
+	-access +rwc
+	+load_value_test
+	-coverage all
+	-covtest load_value_test
+
+   User defined plus("+") options:
+	+load_value_test
+
+Loading snapshot worklib.tb_top:sv .................... Done
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /tools/cadence/IUS15.2.082/tools/inca/files/ncsimrc
+ncsim> run
+                   0ns |counter_coverage| is created
+                   0ns |counter_driver| is created
+                   0ns |counter_generator| is created
+                   0ns |counter_monitor| is created
+                   0ns |counter_agent| is created
+                   0ns |counter_scoreboard| is created
+                   0ns |counter_environment| is created
+                   0ns |counter_base_test| is created
+                   0ns |load_value_test| is created
+                   0ns |counter_transaction| is created
+                   0ns |counter_transaction| is created
+                   0ns |SCB| *E: C_out failed for *reset operation* :: exp x, actual x
+                  20ns |counter_transaction| is created
+                 120ns |counter_transaction| is created
+                 140ns |counter_transaction| is created
+                 190ns |counter_transaction| is created
+                 270ns |counter_transaction| is created
+                 320ns |counter_transaction| is created
+                 370ns |counter_transaction| is created
+                 450ns |counter_transaction| is created
+                 500ns |counter_transaction| is created
+                 530ns |counter_transaction| is created
+                 600ns |counter_transaction| is created
+                 630 ns || loading tasks ended load_value_test
+                 630ns |SCB| Total passed test: 63 
+                 630ns |SCB| Total failed test: 1 
+                 630ns |SCB| Total test count: 64 
+Simulation complete via $finish(1) at time 630 NS + 1
+../tb/tb_top/counter_tb_top.sv:73         $finish;
+ncsim> exit
+ncsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "cg" will not be dumped to database as per_instance option value is set to 0:../tb/agent/counter_coverage.sv, 3.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_top(tb_top)
+  scope    :  scope
+  testname :  load_value_test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_7bcbccc4_04d7665d.ucm (reused)
+  data               :  ./cov_work/scope/load_value_test/icc_7bcbccc4_04d7665d.ucd
+TOOL:	irun(64)	15.20-s086: Exiting on Sep 25, 2024 at 10:02:56 +06  (total: 00:00:00)
