@@ -1,6 +1,4 @@
 *.html linguist-vendored
 *.log linguist-vendored
-*.java linguist-vendored
-*.css linguist-vendored
-*.f linguist-vendored
-*.f90 linguist-vendored
+Binary_Counter/sim/html_09-25-2024_10~04~53/** linguist-vendored
+Binary_Counter/sim/cov_work/scope/** linguist-vendored
