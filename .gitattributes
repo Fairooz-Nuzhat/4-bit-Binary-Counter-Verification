@@ -1,2 +1,6 @@
 *.html linguist-vendored
 *.log linguist-vendored
+*.java linguist-vendored
+*.css linguist-vendored
+*.f linguist-vendored
+*.f90 linguist-vendored
